@@ -76,7 +76,9 @@ function omz_termsupport_preexec {
 }
 
 precmd_functions+=(omz_termsupport_precmd)
-preexec_functions+=(omz_termsupport_preexec)
+# Don't use preexec function so that the tab name won't be changed
+# to a mere cmd name without PWD path.
+#preexec_functions+=(omz_termsupport_preexec)
 
 
 # Keep Apple Terminal.app's current working directory updated
